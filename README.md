@@ -14,15 +14,16 @@
   </a>
 </p>
 
-![demo](https://user-images.githubusercontent.com/62770500/199337431-d632cc3c-12fb-40db-8f96-0d5e55555579.png)
----
+## ![demo](https://user-images.githubusercontent.com/62770500/199337431-d632cc3c-12fb-40db-8f96-0d5e55555579.png)
+
 ## 🚨 About this repo (please read!)
 
-You can use this code for your own website, but please with attribution**.
+You can use this code for your own website, but please with attribution\*\*.
 
 Please note that the design of the website is inspired from "brittanychiang.com", but didn't copied even a single piece of code from brittanyching repo, However, i built the portfolio from scratch with different technolgoies, like "Tailwind CSS" and "Framer Motion" and i added some other functionalities to it, so it might seems the same, but believe me the entire website is different!!!!. If you have questions about implementation, please refer to the [Next.js DOCS](https://nextjs.org/docs) same thing for Tailwind CSS and Framer Motion check out the Documentation, Or you can simply reach to me directly.
 
 ---
+
 ### Table of Contents
 
 - [Description](#description)
@@ -32,6 +33,7 @@ Please note that the design of the website is inspired from "brittanychiang.com"
 - [Author Info](#author-info)
 
 ---
+
 ## Description
 
 Without a doubt a portfolio website is a unique way to showcase your work and let others know about yourself. It’s like an evergreen platform for your projects, case studies, and information about you. However, Why why did i choose Next.js? Because it is a React framework with Server-Side Rendering, which is good for SEO (Good for us if we get found on Google, right?).
@@ -41,6 +43,7 @@ Also, Next.js helps us build a full back-end & blazing-fast websites along with 
 Why tailwindcss? Because TailwindCSS is a framework which reduces a lot of styling efforts. It has low level CSS classes that you can directly embed into the HTML code.
 
 ---
+
 ## Technologies & libraries
 
 Since i integrated some of my project into my website i'll i mention most of technologies & libraries that i used.
@@ -55,8 +58,10 @@ Since i integrated some of my project into my website i'll i mention most of tec
 - react-leaflet
 - Vercel Analytics
 
-##### Note : 
-##### You can find the rest of packages in the file ```/package.json```
+##### Note :
+
+##### You can find the rest of packages in the file `/package.json`
+
 ---
 
 ### How To Use
@@ -82,17 +87,19 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [an
    ```sh
    yarn
    ```
-   
-4. (OPTIONAL) : Add .env file to the root project 
- 
+
+4. (OPTIONAL) : Add .env file to the root project
+
 ```bash
     touch .env
 ```
 
 5.  (OPTIONAL) : Add your Google API key inside .env file.
 
-###### ***Note :***
+###### **_Note :_**
+
 ###### not Adding Google API to the project will cause not returning the correct zip code, it might be always "00000"
+
 ###### make sure you enabled Geolocation to this API
 
 ```Javascript
@@ -118,60 +125,79 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [an
    ```sh
    yarn run serve
    ```
+
 ---
+
 ## API Description :
+
 ##### Endpoint 1 :
-the following endpoint will return a json object contains a bunch of information about the ip address  
+
+the following endpoint will return a json object contains a bunch of information about the ip address
 
 ```api
     /api/userInfoByIP/[IP-Address]
 ```
+
 example :
 
 ```api
     /api/userInfoByIP/159.89.173.104
 ```
-###### ***Get Request to above endpoint will return the following json data :***
+
+###### **_Get Request to above endpoint will return the following json data :_**
+
 ```JavaScript
     {"zip":"560002","country":"India","countryCode":"IN","region":"KA","regionName":"Karnataka","city":"Bengaluru","datetime":"9/6/2022, 1:24:30 AM","lat":12.9634,"lon":77.5855,"timezone":"Asia/Kolkata","isp":"DigitalOcean, LLC","org":"Digital Ocean","as":"AS14061 DigitalOcean, LLC","query":"159.89.173.104"}
 ```
 
 ##### Endpoint 2 :
+
 the following endpoint will return a json object contains the zip code for the latitude and logitude
 
 ```api
     "/api/userInfoByLatLon/" + lat + "/" + lon
 ```
+
 example :
 
 ```api
     /api/userInfoByIP/159.89.173.104
 ```
-###### ***Get Request to above endpoint will return the zipcode of the lat and long provided :***
+
+###### **_Get Request to above endpoint will return the zipcode of the lat and long provided :_**
+
 ```JavaScript
     {"zipcode" : "56998"}
 ```
-###### ***the Response below is returned if the lat and long provided has no zip code in Google maps, like lat & long in positioned in the ocean :***
+
+###### **_the Response below is returned if the lat and long provided has no zip code in Google maps, like lat & long in positioned in the ocean :_**
+
 ```JavaScript
     {"zipcode" : "00000"}
 ```
 
 ##### Endpoint 3 :
-the following endpoint will return a json object contains "quote" and "author", for SpeedTyping project i displayed only the quote, **minLength** is considered as the minimum of characters.  
+
+the following endpoint will return a json object contains "quote" and "author", for SpeedTyping project i displayed only the quote, **minLength** is considered as the minimum of characters.
 
 ```api
     /api/typing/[minLength]
 ```
-##### notes : 
-- ***minLength*** should be between 10 - 300.
-- the returned quote is a chain of 
+
+##### notes :
+
+- **_minLength_** should be between 10 - 300.
+- the returned quote is a chain of
 - i costumized the original Endpoint using The API Route of Nextjs, here is the Original Endpoint.
 
 ##### Original Endpiont :
-###### URL : 
+
+###### URL :
+
 ```api
     https://api.quotable.io/random?minLength=[minLength]
 ```
+
 ---
 
 ## References
@@ -193,7 +219,7 @@ the following endpoint will return a json object contains "quote" and "author", 
 
 MIT License
 
-Copyright (c) [2022] [Abdellatif Anaflous]
+Copyright (c) [2022] [Anthony Miller]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -213,14 +239,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-
 ---
 
 ## Author Info
 
 - Linkedin - [@abdellatif-anaflous](https://www.linkedin.com/in/abdellatif-anaflous/)
-- Website - [Abdellatif Anaflous](https://anaflous.com)
+- Website - [Anthony Miller](https://anaflous.com)
 
 [Back To The Top](#description) :
-
