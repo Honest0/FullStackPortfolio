@@ -1,0 +1,19 @@
+namespace: my-website
+my-website:
+  defines: runnable
+  metadata:
+    name: my-website
+    description: >-
+      This is a personal portfolio website that showcases the owner's skills and
+      projects.
+    icon: https://emojiapi.dev/api/v1/globe_with_meridians.svg
+  containers:
+    my-website:
+      build: .
+  services:
+    my-website-3000-tcp:
+      container: my-website
+      port: 3000
+      host-port: 3000
+      publish: false
+      protocol: TCP
