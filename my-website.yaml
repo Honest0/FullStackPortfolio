@@ -1,0 +1,19 @@
+namespace: my-website
+my-website:
+  defines: runnable
+  metadata:
+    name: my-website
+    description: >-
+      Could not determine short description due to lack of access to necessary
+      files
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    my-website:
+      build: .
+  services:
+    my-website-3000-tcp:
+      container: my-website
+      port: 3000
+      host-port: 3000
+      publish: false
+      protocol: TCP
